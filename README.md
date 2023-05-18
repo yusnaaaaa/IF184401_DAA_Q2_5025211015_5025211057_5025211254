@@ -183,7 +183,7 @@ In the context of this game, rand() is used to select random positions on the ga
 
 ### Libraries Used
 
-    https://github.com/yusnaaaaa/IF184401_DAA_Q2_5025211015_5025211057_5025211254/blob/153944ebbc785dc4a9ab932f9a8ce89d8838c00b/TicTacToe/TicTacToe.cpp#L1-L5
+https://github.com/yusnaaaaa/IF184401_DAA_Q2_5025211015_5025211057_5025211254/blob/153944ebbc785dc4a9ab932f9a8ce89d8838c00b/TicTacToe/TicTacToe.cpp#L1-L5
 
     **Explanation :**
     `Header file <stdio.h>` : This header file provides standard input/output functions such as printf() and scanf(), which are used in the program to display messages on the screen and receive input from the user.
@@ -198,7 +198,7 @@ In the context of this game, rand() is used to select random positions on the ga
 
 ### Array Board
 
-    https://github.com/yusnaaaaa/IF184401_DAA_Q2_5025211015_5025211057_5025211254/blob/153944ebbc785dc4a9ab932f9a8ce89d8838c00b/TicTacToe/TicTacToe.cpp#L7-L9
+https://github.com/yusnaaaaa/IF184401_DAA_Q2_5025211015_5025211057_5025211254/blob/153944ebbc785dc4a9ab932f9a8ce89d8838c00b/TicTacToe/TicTacToe.cpp#L7-L9
 
     **Explanation :**
     The line of code
@@ -210,14 +210,14 @@ In the context of this game, rand() is used to select random positions on the ga
 
 ### mainScreen Function
 
-    https://github.com/yusnaaaaa/IF184401_DAA_Q2_5025211015_5025211057_5025211254/blob/153944ebbc785dc4a9ab932f9a8ce89d8838c00b/TicTacToe/TicTacToe.cpp#L11-L17
+https://github.com/yusnaaaaa/IF184401_DAA_Q2_5025211015_5025211057_5025211254/blob/153944ebbc785dc4a9ab932f9a8ce89d8838c00b/TicTacToe/TicTacToe.cpp#L11-L17
 
     **Explanation :**
     The function `void mainScreen()` is defined to display the main screen or menu of the Tic Tac Toe game. The main screen provides a clear and concise presentation of the game options, allowing the player to choose the desired level of gameplay.
 
 ### gameBoard Function
 
-    https://github.com/yusnaaaaa/IF184401_DAA_Q2_5025211015_5025211057_5025211254/blob/153944ebbc785dc4a9ab932f9a8ce89d8838c00b/TicTacToe/TicTacToe.cpp#L19-L28
+https://github.com/yusnaaaaa/IF184401_DAA_Q2_5025211015_5025211057_5025211254/blob/153944ebbc785dc4a9ab932f9a8ce89d8838c00b/TicTacToe/TicTacToe.cpp#L19-L28
 
     **Explanation :**
     The function `void gameBoard(char* P1, char* P2)` is defined to display the current state of the Tic Tac Toe game board. The elements of the arr array are used to populate the game board. Each element represents a cell on the board, and its corresponding value is printed.
@@ -228,7 +228,7 @@ In the context of this game, rand() is used to select random positions on the ga
 
 ### init Function
 
-    https://github.com/yusnaaaaa/IF184401_DAA_Q2_5025211015_5025211057_5025211254/blob/153944ebbc785dc4a9ab932f9a8ce89d8838c00b/TicTacToe/TicTacToe.cpp#L30-L36
+https://github.com/yusnaaaaa/IF184401_DAA_Q2_5025211015_5025211057_5025211254/blob/153944ebbc785dc4a9ab932f9a8ce89d8838c00b/TicTacToe/TicTacToe.cpp#L30-L36
 
     **Explanation :**
     The function `void init()` is defined to initialize or reset the Tic Tac Toe game board to its initial state. It sets all the elements of the arr array to the character '.', indicating empty spaces or placeholders.
@@ -239,7 +239,7 @@ In the context of this game, rand() is used to select random positions on the ga
 
 ### Result Function
 
-    https://github.com/yusnaaaaa/IF184401_DAA_Q2_5025211015_5025211057_5025211254/blob/153944ebbc785dc4a9ab932f9a8ce89d8838c00b/TicTacToe/TicTacToe.cpp#L38-L71
+https://github.com/yusnaaaaa/IF184401_DAA_Q2_5025211015_5025211057_5025211254/blob/153944ebbc785dc4a9ab932f9a8ce89d8838c00b/TicTacToe/TicTacToe.cpp#L38-L71
 
     **Explanation :**
     The function char result() is defined to determine the current result or outcome of the Tic Tac Toe game. It analyzes the game board represented by the arr array and checks for winning conditions or a draw.
@@ -258,7 +258,7 @@ In the context of this game, rand() is used to select random positions on the ga
 
 ### Minimax Function
 
-    https://github.com/yusnaaaaa/IF184401_DAA_Q2_5025211015_5025211057_5025211254/blob/153944ebbc785dc4a9ab932f9a8ce89d8838c00b/TicTacToe/TicTacToe.cpp#L73-L121
+https://github.com/yusnaaaaa/IF184401_DAA_Q2_5025211015_5025211057_5025211254/blob/153944ebbc785dc4a9ab932f9a8ce89d8838c00b/TicTacToe/TicTacToe.cpp#L73-L121
 
     **Explanation :**
     The function int minimax(int depth, bool isMaximizing) implements the minimax algorithm, which is a recursive algorithm used to determine the optimal move in a game with perfect information. This function uses the minimax algorithm to recursively evaluate all possible moves and assign scores, ultimately returning the best score for the maximizing player or the worst score for the minimizing player at the current game state.
@@ -283,7 +283,7 @@ In the context of this game, rand() is used to select random positions on the ga
 
 ### bestMove Function
 
-    https://github.com/yusnaaaaa/IF184401_DAA_Q2_5025211015_5025211057_5025211254/blob/153944ebbc785dc4a9ab932f9a8ce89d8838c00b/TicTacToe/TicTacToe.cpp#L123-L140
+https://github.com/yusnaaaaa/IF184401_DAA_Q2_5025211015_5025211057_5025211254/blob/153944ebbc785dc4a9ab932f9a8ce89d8838c00b/TicTacToe/TicTacToe.cpp#L123-L140
 
     **Explanation :**
     The function void bestMove() is used to determine the best possible move for the AI player ('O') in the game. The bestMove() function utilizes the minimax() function to evaluate and select the best move for the AI player ('O') by iterating through all possible moves, assigning scores, and choosing the move with the highest score.
@@ -300,7 +300,7 @@ In the context of this game, rand() is used to select random positions on the ga
 
 ### main Function
 
-    https://github.com/yusnaaaaa/IF184401_DAA_Q2_5025211015_5025211057_5025211254/blob/153944ebbc785dc4a9ab932f9a8ce89d8838c00b/TicTacToe/TicTacToe.cpp#L142-L264
+https://github.com/yusnaaaaa/IF184401_DAA_Q2_5025211015_5025211057_5025211254/blob/153944ebbc785dc4a9ab932f9a8ce89d8838c00b/TicTacToe/TicTacToe.cpp#L142-L264
 
     **Explanation :**
     The int main() function serves as the central component of the Tic Tac Toe game program. It encompasses the main gameplay logic and controls the flow of the game. The function starts by setting up an infinite while loop, ensuring that the game continues until the player decides to exit.
