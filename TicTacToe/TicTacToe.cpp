@@ -11,6 +11,46 @@ void gameBoard(){
     printf("%c  %c  %c \n%c  %c  %c \n%c  %c  %c \n", arr[0][0], arr[0][1], arr[0][2], arr[1][0], arr[1][1], arr[1][2], arr[2][0], arr[2][1], arr[2][2]);
 }
 
+char result(){
+    if (arr[0][0] == arr[1][0] && arr[1][0] == arr[2][0] && arr[2][0]!='.'){
+            return arr[0][0];
+    }
+    if (arr[0][1] == arr[1][1] && arr[1][1] == arr[2][1] && arr[2][1]!='.'){
+            return arr[0][1];
+    }
+    if (arr[0][2] == arr[1][2] && arr[1][2] == arr[2][2] && arr[2][2]!='.'){
+            return arr[0][2];
+    }
+    if (arr[0][0] == arr[0][1] && arr[0][1] == arr[0][2] && arr[0][2]!='.'){
+            return arr[0][0];
+    }
+    if (arr[1][0] == arr[1][1] && arr[1][1] == arr[1][2] && arr[1][2]!='.'){
+            return arr[1][0];
+    }
+    if (arr[2][0] == arr[2][1] && arr[2][1] == arr[2][2] && arr[2][2]!='.'){
+            return arr[2][0];
+    }
+    if (arr[0][0] == arr[1][1] && arr[1][1] == arr[2][2] && arr[2][2]!='.'){
+        return arr[0][0];
+    }
+    if (arr[0][2] == arr[1][1] && arr[1][1] == arr[2][0] && arr[2][0]!='.'){
+        return arr[0][2];
+    }
+
+    bool cek = true;
+    for(int i=0; i<3; i++){
+       for(int j=0; j<3; j++){
+          if(arr[i][j] == '.') {
+            cek = false;
+            break;
+          }
+       }
+    }
+
+    if(cek) return 'T';
+    return '-';
+}
+
 int main (){
     printf("Level 1 : Two Player Game\n");
     printf("Level 2 : Player vs Bot\n");
@@ -41,8 +81,11 @@ int main (){
 
                 gameBoard();
 
-                if(cnt==9 && level ==1){
-                    printf("Game finished\n");
+                res = result();
+                if(res!='-' && level == 2) {
+                    if(res == 'O') printf("Player2 wins.\n");
+                    else if (res == 'X') printf("Player1 wins.\n");
+                    else if (res == 'T') printf("Draw.\n");
                     break;
                 }
 
@@ -74,8 +117,11 @@ int main (){
 
                 gameBoard();
                 
-                if(cnt==9 && level ==1){
-                    printf("Game finished\n");
+                res = result();
+                if(res!='-') {
+                    if(res == 'O') printf("Bot wins.\n");
+                    else if (res == 'X') printf("Player wins.\n");
+                    else if (res == 'T') printf("Draw.\n");
                     break;
                 }
 
