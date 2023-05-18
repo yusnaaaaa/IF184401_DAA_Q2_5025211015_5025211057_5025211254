@@ -58,13 +58,15 @@ The players are trying to maximize or minimize the others result: The AI is the 
 
 **Tic Tac Toe minimax game illustration :**
 
-![minimax](https://github.com/yusnaaaaa/IF184401_DAA_Q2_5025211015_5025211057_5025211254/assets/91377793/f225b81f-803a-44cf-8236-8ce57b40681d)
+![minimax](https://github.com/yusnaaaaa/IF184401_DAA_Q2_5025211015_5025211057_5025211254/assets/91377793/cd3a0db2-5ac0-41a6-afcb-3f85dca294d9)
+
 
 **Complexity Time :**
 
 As we traverse all levels of a tree and at each level, we need to generate all permutations of each node using DFS (Depth-First Search), we can conclude that the worst-case scenario is the only case that runs with a complexity of O(V+E) or O(b^d) for DFS (i.e., exploring the entire tree). Basically, the time complexity of the search using the Minimax Algorithm is the same as that of DFS.
 
 ![grafik minimax](https://github.com/yusnaaaaa/IF184401_DAA_Q2_5025211015_5025211057_5025211254/assets/91377793/7df5152e-7716-498f-a093-42ad03db1b17)
+
 
 **b. Random value by time :** 
 
