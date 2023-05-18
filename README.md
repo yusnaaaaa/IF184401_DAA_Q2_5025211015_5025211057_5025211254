@@ -349,4 +349,5 @@ Overall, this code implements the Tic Tac Toe game with various difficulty level
 3. (5025211254) Yusna Millaturrosyidah (33,33%)
    - Creating game concept, adding turn bot and player movement, debugging minimax algorithm.
 
-![ttd](https://github.com/yusnaaaaa/IF184401_DAA_Q2_5025211015_5025211057_5025211254/assets/91377793/260a46e2-1d05-45d0-a3ad-5a20b81ce726)
+![Screenshot 2023-05-18 193128](https://github.com/yusnaaaaa/IF184401_DAA_Q2_5025211015_5025211057_5025211254/assets/114417418/1bb598de-6d68-48fb-83b4-170b9b6357b1)
+
