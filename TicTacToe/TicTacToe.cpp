@@ -59,6 +59,18 @@ int minimax(int depth, bool isMaximizing){
 
     int score, bestScore;
     char res = result();
+    if (res=='O') {
+        score = 1;
+        return score;
+    }
+    else if (res=='X') {
+        score = -1;
+        return score;
+    }
+    else if (res=='T') {
+        score = 0;
+        return score;
+    }
 
     if(isMaximizing){
         bestScore = INTMIN;
