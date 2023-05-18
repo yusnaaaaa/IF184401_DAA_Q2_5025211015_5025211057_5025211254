@@ -2,6 +2,6 @@
 ## Anggota Kelompok
 NRP | Nama |
 --- | --- | 
-5025211015 | M. Daffa Ashdaqfillah |
+5025211015 | Muhammad Daffa Ashdaqfillah |
 5025211057 | Salsabila Fatma Aripa |
 5025211254 | Yusna Millaturrosyidah | 
