@@ -185,133 +185,133 @@ In the context of this game, rand() is used to select random positions on the ga
 
 https://github.com/yusnaaaaa/IF184401_DAA_Q2_5025211015_5025211057_5025211254/blob/153944ebbc785dc4a9ab932f9a8ce89d8838c00b/TicTacToe/TicTacToe.cpp#L1-L5
 
-    **Explanation :**
-    `Header file <stdio.h>` : This header file provides standard input/output functions such as printf() and scanf(), which are used in the program to display messages on the screen and receive input from the user.
+**Explanation :**
+`Header file <stdio.h>` : This header file provides standard input/output functions such as printf() and scanf(), which are used in the program to display messages on the screen and receive input from the user.
 
-    `Header file <time.h>` : This header file provides functions for manipulating time and date. In this program, this header file is used to generate random values when the computer player (Bot or AI) needs to make a move.
+`Header file <time.h>` : This header file provides functions for manipulating time and date. In this program, this header file is used to generate random values when the computer player (Bot or AI) needs to make a move.
 
-    `Header file <stdbool.h>` : This header file introduces the boolean data type (bool) and boolean constants (true and false). The boolean data type is used in this program to store truth values (true or false), which are used in logical conditions and program flow control.
+`Header file <stdbool.h>` : This header file introduces the boolean data type (bool) and boolean constants (true and false). The boolean data type is used in this program to store truth values (true or false), which are used in logical conditions and program flow control.
 
-    `Header file <stdlib.h>` : This header file provides general utility functions such as dynamic memory allocation (malloc() and free()) and other utility functions. In this program, this header file is used to use functions like rand() to generate random numbers.
+`Header file <stdlib.h>` : This header file provides general utility functions such as dynamic memory allocation (malloc() and free()) and other utility functions. In this program, this header file is used to use functions like rand() to generate random numbers.
 
-    `Header file <string.h>` : This header file provides functions for string manipulation, such as strcpy() and strlen(). In this program, this header file is not directly used, so it may not be necessary in the context of this program.
+`Header file <string.h>` : This header file provides functions for string manipulation, such as strcpy() and strlen(). In this program, this header file is not directly used, so it may not be necessary in the context of this program.
 
 ### Array Board
 
 https://github.com/yusnaaaaa/IF184401_DAA_Q2_5025211015_5025211057_5025211254/blob/153944ebbc785dc4a9ab932f9a8ce89d8838c00b/TicTacToe/TicTacToe.cpp#L7-L9
 
-    **Explanation :**
-    The line of code
-    `char arr[3][3]= {'.','.','.', '.','.','.', '.','.','.'};` initializes a 2-dimensional character array named arr with a size of 3x3. The array is filled with the characters '.', representing empty spaces or placeholders.
+**Explanation :**
+The line of code
+`char arr[3][3]= {'.','.','.', '.','.','.', '.','.','.'};` initializes a 2-dimensional character array named arr with a size of 3x3. The array is filled with the characters '.', representing empty spaces or placeholders.
 
-    This array is used as the game board for the Tic Tac Toe game. Each element in the array corresponds to a cell on the game board. The initial values of all elements are set to '.', indicating that the cells are initially empty.
+This array is used as the game board for the Tic Tac Toe game. Each element in the array corresponds to a cell on the game board. The initial values of all elements are set to '.', indicating that the cells are initially empty.
 
-    As the game progresses, the elements in the arr array will be updated to hold the symbols 'X' or 'O' to represent the moves made by the players.
+As the game progresses, the elements in the arr array will be updated to hold the symbols 'X' or 'O' to represent the moves made by the players.
 
 ### mainScreen Function
 
 https://github.com/yusnaaaaa/IF184401_DAA_Q2_5025211015_5025211057_5025211254/blob/153944ebbc785dc4a9ab932f9a8ce89d8838c00b/TicTacToe/TicTacToe.cpp#L11-L17
 
-    **Explanation :**
-    The function `void mainScreen()` is defined to display the main screen or menu of the Tic Tac Toe game. The main screen provides a clear and concise presentation of the game options, allowing the player to choose the desired level of gameplay.
+**Explanation :**
+The function `void mainScreen()` is defined to display the main screen or menu of the Tic Tac Toe game. The main screen provides a clear and concise presentation of the game options, allowing the player to choose the desired level of gameplay.
 
 ### gameBoard Function
 
 https://github.com/yusnaaaaa/IF184401_DAA_Q2_5025211015_5025211057_5025211254/blob/153944ebbc785dc4a9ab932f9a8ce89d8838c00b/TicTacToe/TicTacToe.cpp#L19-L28
 
-    **Explanation :**
-    The function `void gameBoard(char* P1, char* P2)` is defined to display the current state of the Tic Tac Toe game board. The elements of the arr array are used to populate the game board. Each element represents a cell on the board, and its corresponding value is printed.
+**Explanation :**
+The function `void gameBoard(char* P1, char* P2)` is defined to display the current state of the Tic Tac Toe game board. The elements of the arr array are used to populate the game board. Each element represents a cell on the board, and its corresponding value is printed.
 
-    The players' names and symbols are displayed below the game board. P1 corresponds to the first player's name, and P2 corresponds to the second player's name. The symbols 'X' and 'O' represent the moves made by the respective players.
+The players' names and symbols are displayed below the game board. P1 corresponds to the first player's name, and P2 corresponds to the second player's name. The symbols 'X' and 'O' represent the moves made by the respective players.
 
-    By calling this function during the game, the current state of the game board is visually presented to the players, allowing them to see the positions of their moves and the overall progress of the game.
+By calling this function during the game, the current state of the game board is visually presented to the players, allowing them to see the positions of their moves and the overall progress of the game.
 
 ### init Function
 
 https://github.com/yusnaaaaa/IF184401_DAA_Q2_5025211015_5025211057_5025211254/blob/153944ebbc785dc4a9ab932f9a8ce89d8838c00b/TicTacToe/TicTacToe.cpp#L30-L36
 
-    **Explanation :**
-    The function `void init()` is defined to initialize or reset the Tic Tac Toe game board to its initial state. It sets all the elements of the arr array to the character '.', indicating empty spaces or placeholders.
+**Explanation :**
+The function `void init()` is defined to initialize or reset the Tic Tac Toe game board to its initial state. It sets all the elements of the arr array to the character '.', indicating empty spaces or placeholders.
 
-    The function achieves this by using nested loops to iterate through each element of the 2-dimensional arr array. The outer loop iterates over the rows, and the inner loop iterates over the columns. For each element, the assignment statement arr[i][j]='.' is used to set its value to '.'.
+The function achieves this by using nested loops to iterate through each element of the 2-dimensional arr array. The outer loop iterates over the rows, and the inner loop iterates over the columns. For each element, the assignment statement arr[i][j]='.' is used to set its value to '.'.
 
-    After executing this function, the game board will be reset to its original state, where all the cells are empty. This allows for a fresh start or a new game to be played on the board.
+After executing this function, the game board will be reset to its original state, where all the cells are empty. This allows for a fresh start or a new game to be played on the board.
 
 ### Result Function
 
 https://github.com/yusnaaaaa/IF184401_DAA_Q2_5025211015_5025211057_5025211254/blob/153944ebbc785dc4a9ab932f9a8ce89d8838c00b/TicTacToe/TicTacToe.cpp#L38-L71
 
-    **Explanation :**
-    The function char result() is defined to determine the current result or outcome of the Tic Tac Toe game. It analyzes the game board represented by the arr array and checks for winning conditions or a draw.
+**Explanation :**
+The function char result() is defined to determine the current result or outcome of the Tic Tac Toe game. It analyzes the game board represented by the arr array and checks for winning conditions or a draw.
 
-    The function first checks for a winning condition in each row by comparing the values of 3 consecutive elements in the same row yakni (0, 1, 2). It iterates through each row using a for loop and checks if the three elements are equal to each other and not equal to '.', indicating that a player has made a move in that row. If a winning condition is found, the corresponding symbol is returned.
+The function first checks for a winning condition in each row by comparing the values of 3 consecutive elements in the same row yakni (0, 1, 2). It iterates through each row using a for loop and checks if the three elements are equal to each other and not equal to '.', indicating that a player has made a move in that row. If a winning condition is found, the corresponding symbol is returned.
 
-    Next, the function checks for a winning condition in each column by comparing the values of three consecutive elements in the same column. It uses a similar logic as the row check but iterates through each column using a for loop. If a winning condition is found, the corresponding symbol is returned.
+Next, the function checks for a winning condition in each column by comparing the values of three consecutive elements in the same column. It uses a similar logic as the row check but iterates through each column using a for loop. If a winning condition is found, the corresponding symbol is returned.
 
-    The function then checks for a winning condition in the diagonal from the top-left to the bottom-right. It compares the values of the three elements at positions (0, 0), (1, 1), and (2, 2). If a winning condition is found, the corresponding symbol is returned.
+The function then checks for a winning condition in the diagonal from the top-left to the bottom-right. It compares the values of the three elements at positions (0, 0), (1, 1), and (2, 2). If a winning condition is found, the corresponding symbol is returned.
 
-    Finally, the function checks for a winning condition in the diagonal from the top-right to the bottom-left. It compares the values of the three elements at positions (0, 2), (1, 1), and (2, 0). If a winning condition is found, the corresponding symbol is returned.
+Finally, the function checks for a winning condition in the diagonal from the top-right to the bottom-left. It compares the values of the three elements at positions (0, 2), (1, 1), and (2, 0). If a winning condition is found, the corresponding symbol is returned.
 
-    If no winning condition is found after the previous checks, the function proceeds to check if the game board is full, indicating a draw. It uses nested loops to iterate through each element of the arr array. If an empty cell (denoted by '.') is found, the boolean variable cek is set to false, indicating that the board is not full. If the board is full, meaning all cells are filled, the function returns 'T' to represent a draw.
+If no winning condition is found after the previous checks, the function proceeds to check if the game board is full, indicating a draw. It uses nested loops to iterate through each element of the arr array. If an empty cell (denoted by '.') is found, the boolean variable cek is set to false, indicating that the board is not full. If the board is full, meaning all cells are filled, the function returns 'T' to represent a draw.
 
-    If none of the above conditions are met, the function returns '-', indicating that the game is still ongoing.
+If none of the above conditions are met, the function returns '-', indicating that the game is still ongoing.
 
 ### Minimax Function
 
 https://github.com/yusnaaaaa/IF184401_DAA_Q2_5025211015_5025211057_5025211254/blob/153944ebbc785dc4a9ab932f9a8ce89d8838c00b/TicTacToe/TicTacToe.cpp#L73-L121
 
-    **Explanation :**
-    The function int minimax(int depth, bool isMaximizing) implements the minimax algorithm, which is a recursive algorithm used to determine the optimal move in a game with perfect information. This function uses the minimax algorithm to recursively evaluate all possible moves and assign scores, ultimately returning the best score for the maximizing player or the worst score for the minimizing player at the current game state.
+**Explanation :**
+The function int minimax(int depth, bool isMaximizing) implements the minimax algorithm, which is a recursive algorithm used to determine the optimal move in a game with perfect information. This function uses the minimax algorithm to recursively evaluate all possible moves and assign scores, ultimately returning the best score for the maximizing player or the worst score for the minimizing player at the current game state.
 
-    The function takes two parameters: depth, which represents the current depth in the game tree, and isMaximizing, a boolean flag indicating whether it is the maximizing player's turn or not.
+The function takes two parameters: depth, which represents the current depth in the game tree, and isMaximizing, a boolean flag indicating whether it is the maximizing player's turn or not.
 
-    The function first checks the result of the game by calling the result() function. If the result is 'O', it means the maximizing player (represented by 'O') has won, so the function assigns a score of 1 and returns it. If the result is 'X', it means the minimizing player (represented by 'X') has won, so the function assigns a score of -1 and returns it. If the result is 'T', it means the game is a draw, so the function assigns a score of 0 and returns it.
+The function first checks the result of the game by calling the result() function. If the result is 'O', it means the maximizing player (represented by 'O') has won, so the function assigns a score of 1 and returns it. If the result is 'X', it means the minimizing player (represented by 'X') has won, so the function assigns a score of -1 and returns it. If the result is 'T', it means the game is a draw, so the function assigns a score of 0 and returns it.
 
-    If none of the above conditions are met, the function proceeds to evaluate the possible moves.
+If none of the above conditions are met, the function proceeds to evaluate the possible moves.
 
-    If it is the maximizing player's turn (isMaximizing is true), the function initializes bestScore as a very low value (-1000) to track the highest score found. It then iterates through each cell of the game board represented by the arr array. If a cell is empty (denoted by '.'), it makes a move by assigning 'O' to that cell, and then recursively calls the minimax function with depth+1 and isMaximizing set to false to evaluate the opponent's turn.
+If it is the maximizing player's turn (isMaximizing is true), the function initializes bestScore as a very low value (-1000) to track the highest score found. It then iterates through each cell of the game board represented by the arr array. If a cell is empty (denoted by '.'), it makes a move by assigning 'O' to that cell, and then recursively calls the minimax function with depth+1 and isMaximizing set to false to evaluate the opponent's turn.
 
-    After the recursive call, the move is undone by resetting the cell to '.'. The returned score is compared with bestScore, and if it is greater, bestScore is updated to the new higher score.
+After the recursive call, the move is undone by resetting the cell to '.'. The returned score is compared with bestScore, and if it is greater, bestScore is updated to the new higher score.
 
-    Finally, after iterating through all possible moves, the function returns bestScore, representing the highest possible score for the maximizing player.
+Finally, after iterating through all possible moves, the function returns bestScore, representing the highest possible score for the maximizing player.
 
-    If it is the minimizing player's turn (isMaximizing is false), the function follows a similar logic as above, but instead, it initializes bestScore as a very high value (1000) to track the lowest score found. It aims to find the move with the lowest possible score for the minimizing player.
+If it is the minimizing player's turn (isMaximizing is false), the function follows a similar logic as above, but instead, it initializes bestScore as a very high value (1000) to track the lowest score found. It aims to find the move with the lowest possible score for the minimizing player.
 
-    The function iterates through each cell, makes a move with 'X', recursively calls the minimax function with depth+1 and isMaximizing set to true to evaluate the opponent's turn, undoes the move, and updates bestScore if the returned score is lower.
+The function iterates through each cell, makes a move with 'X', recursively calls the minimax function with depth+1 and isMaximizing set to true to evaluate the opponent's turn, undoes the move, and updates bestScore if the returned score is lower.
 
-    After evaluating all possible moves, the function returns bestScore, representing the lowest possible score for the minimizing player.
+After evaluating all possible moves, the function returns bestScore, representing the lowest possible score for the minimizing player.
 
 ### bestMove Function
 
 https://github.com/yusnaaaaa/IF184401_DAA_Q2_5025211015_5025211057_5025211254/blob/153944ebbc785dc4a9ab932f9a8ce89d8838c00b/TicTacToe/TicTacToe.cpp#L123-L140
 
-    **Explanation :**
-    The function void bestMove() is used to determine the best possible move for the AI player ('O') in the game. The bestMove() function utilizes the minimax() function to evaluate and select the best move for the AI player ('O') by iterating through all possible moves, assigning scores, and choosing the move with the highest score.
+**Explanation :**
+The function void bestMove() is used to determine the best possible move for the AI player ('O') in the game. The bestMove() function utilizes the minimax() function to evaluate and select the best move for the AI player ('O') by iterating through all possible moves, assigning scores, and choosing the move with the highest score.
 
-    The function starts by declaring and initializing variables score, bestScore, x, and y. bestScore is set to a very low value (-1000) to track the highest score found, while x and y will store the coordinates of the best move.
+The function starts by declaring and initializing variables score, bestScore, x, and y. bestScore is set to a very low value (-1000) to track the highest score found, while x and y will store the coordinates of the best move.
 
-    Next, the function iterates through each cell of the game board represented by the arr array using nested loops. It checks if a cell is empty (denoted by '.'). If the cell is empty, it temporarily assigns 'O' to that cell, indicating the AI player's move.
+Next, the function iterates through each cell of the game board represented by the arr array using nested loops. It checks if a cell is empty (denoted by '.'). If the cell is empty, it temporarily assigns 'O' to that cell, indicating the AI player's move.
 
-    After making the move, the function calls the minimax() function with a depth of 0 and isMaximizing set to false to evaluate the opponent's turn and obtain a score for the current move.
+After making the move, the function calls the minimax() function with a depth of 0 and isMaximizing set to false to evaluate the opponent's turn and obtain a score for the current move.
 
-    Once the score is obtained, the move is undone by resetting the cell to '.'. The function then compares the obtained score with the current bestScore. If the score is greater than bestScore, it updates bestScore to the new higher score and records the coordinates of the current move in x and y.
+Once the score is obtained, the move is undone by resetting the cell to '.'. The function then compares the obtained score with the current bestScore. If the score is greater than bestScore, it updates bestScore to the new higher score and records the coordinates of the current move in x and y.
 
-    After evaluating all possible moves, the function assigns 'O' to the cell with the best move by using the coordinates stored in x and y. This represents the optimal move for the AI player.
+After evaluating all possible moves, the function assigns 'O' to the cell with the best move by using the coordinates stored in x and y. This represents the optimal move for the AI player.
 
 ### main Function
 
 https://github.com/yusnaaaaa/IF184401_DAA_Q2_5025211015_5025211057_5025211254/blob/153944ebbc785dc4a9ab932f9a8ce89d8838c00b/TicTacToe/TicTacToe.cpp#L142-L264
 
-    **Explanation :**
-    The int main() function serves as the central component of the Tic Tac Toe game program. It encompasses the main gameplay logic and controls the flow of the game. The function starts by setting up an infinite while loop, ensuring that the game continues until the player decides to exit.
+**Explanation :**
+The int main() function serves as the central component of the Tic Tac Toe game program. It encompasses the main gameplay logic and controls the flow of the game. The function starts by setting up an infinite while loop, ensuring that the game continues until the player decides to exit.
 
-    Inside the loop, the console screen is cleared, and the main menu is displayed using the mainScreen() function. The player is then prompted to choose a level of gameplay, and the game board is initialized by calling the init() function, which sets all the cells to '.'.
+Inside the loop, the console screen is cleared, and the main menu is displayed using the mainScreen() function. The player is then prompted to choose a level of gameplay, and the game board is initialized by calling the init() function, which sets all the cells to '.'.
 
-    The subsequent code handles the chosen level differently. For level 1, a two-player game, the loop allows players to take turns entering their moves until the game reaches a conclusion. The game board is displayed using the gameBoard() function, and the players' moves are validated and placed on the board. After each move, the game result is checked using the result() function, and if the game is over, the corresponding message is displayed.
+The subsequent code handles the chosen level differently. For level 1, a two-player game, the loop allows players to take turns entering their moves until the game reaches a conclusion. The game board is displayed using the gameBoard() function, and the players' moves are validated and placed on the board. After each move, the game result is checked using the result() function, and if the game is over, the corresponding message is displayed.
 
-    For level 2, player vs. bot, the loop alternates between the player and the bot. The player's move is obtained through input, while the bot's move is randomly generated using the rand() function. The game result is checked after each move, and if the game is over, the appropriate message is displayed.
+For level 2, player vs. bot, the loop alternates between the player and the bot. The player's move is obtained through input, while the bot's move is randomly generated using the rand() function. The game result is checked after each move, and if the game is over, the appropriate message is displayed.
 
-    Level 3, player vs. AI, follows a similar structure to level 2, but instead of random moves for the AI, the bestMove() function is called to determine the optimal move. Again, the game result is checked, and if the game is over, the corresponding message is displayed.
+Level 3, player vs. AI, follows a similar structure to level 2, but instead of random moves for the AI, the bestMove() function is called to determine the optimal move. Again, the game result is checked, and if the game is over, the corresponding message is displayed.
 
 ## Play Game
 1. We can choose the level first, the example we use is level 3
