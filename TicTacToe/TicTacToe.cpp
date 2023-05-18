@@ -88,6 +88,19 @@ int minimax(int depth, bool isMaximizing){
         }
         return bestScore;
     } else {
+        int bestScore = INTMAX;
+        for(int i=0; i<3; i++){
+            for(int j=0; j<3; j++){
+                if(arr[i][j]=='.'){
+                    arr[i][j]='O';
+                    score = minimax(depth+1, true);
+                    arr[i][j]='.';
+                    if(score > bestScore){
+                        bestScore = score;
+                    }
+                }
+            }
+        }
         return bestScore;
     }
 }
