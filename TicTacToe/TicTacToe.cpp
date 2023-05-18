@@ -2,11 +2,11 @@
 #include <time.h>
 #include <stdbool.h>
 #include <stdlib.h>
+#include <string.h>
 
 char arr[3][3]= {'.','.','.',
                 '.','.','.',
                 '.','.','.'};
-
 
 void mainScreen(){
     printf("================= Tic Tac Toe =================\n\n");
@@ -16,8 +16,14 @@ void mainScreen(){
     printf("===============================================\n");
 }
 
-void gameBoard(){
-    printf("%c  %c  %c \n%c  %c  %c \n%c  %c  %c \n", arr[0][0], arr[0][1], arr[0][2], arr[1][0], arr[1][1], arr[1][2], arr[2][0], arr[2][1], arr[2][2]);
+void gameBoard() {
+    printf("=============== Tic Tac Toe ===============\n\n");
+    printf("\t\t %c | %c | %c \n", arr[0][0], arr[0][1], arr[0][2]);
+    printf("\t\t---+---+---\n");
+    printf("\t\t %c | %c | %c \n", arr[1][0], arr[1][1], arr[1][2]);
+    printf("\t\t---+---+---\n");
+    printf("\t\t %c | %c | %c \n", arr[2][0], arr[2][1], arr[2][2]);
+    printf("===========================================\n");
 }
 
 void init(){
@@ -27,7 +33,6 @@ void init(){
         }
     }
 }
-
 
 char result(){
     for (int i = 0; i < 3; i++){
@@ -134,9 +139,9 @@ void bestMove(){
 }
 
 int main (){
-    mainScreen();
-
     while(1){
+        system("cls");
+        mainScreen();
         int level;
         char res='-';
         printf("\nSelect Level : ");
@@ -145,10 +150,11 @@ int main (){
 
         int player=1, x, y, cnt=0;
         if(level==1){
-            gameBoard();
-            while(1){
 
-                printf("\nPlayer%d your move: ", player);
+            while(1){
+                system("cls");
+                gameBoard();
+                printf("\nPlayer %d your move: \n", player);
                 scanf("%d %d", &x, &y);
 
                 if(arr[x][y]=='X' || arr[x][y]=='O' || x<0 || x>2 || y<0 || y>2) continue;
@@ -156,14 +162,14 @@ int main (){
                 if(player==2) arr[x][y] = 'O';
                 else arr[x][y] = 'X';
 
-                gameBoard();
-
                 cnt++;
                 res = result();
                 if(res!='-') {
-                    if(res == 'O') printf("Player2 wins.\n");
-                    else if (res == 'X') printf("Player1 wins.\n");
-                    else if (res == 'T') printf("Draw.\n");
+                    system("cls");
+                    gameBoard();
+                    if(res == 'O') printf("\nPlayer 2 Win.\n");
+                    else if (res == 'X') printf("\nPlayer 1 Win.\n");
+                    else if (res == 'T') printf("\nDraw.\n");
                     break;
                 }
 
@@ -173,15 +179,17 @@ int main (){
         }
 
         if(level==2){
-            gameBoard();
             int turn;
+            system("cls");
             printf("Bot go first? (1/0) : ");
             scanf("%d", &turn);
 
             if(turn) cnt++;
             while(1){
+                system("cls");
+                gameBoard();
                 if(cnt%2==0){
-                    printf("\nPlayer your move: ");
+                    printf("\nPlayer your move: \n");
                     scanf("%d %d", &x, &y);
                     if(arr[x][y]=='X' || arr[x][y]=='O' || x<0 || x>2 || y<0 || y>2) continue;
                     arr[x][y] = 'X';
@@ -199,13 +207,13 @@ int main (){
                     arr[x][y] = 'O';
                     cnt++;
                 }
-
-                gameBoard();
                 res = result();
                 if(res!='-') {
-                    if(res == 'O') printf("Bot wins.\n");
-                    else if (res == 'X') printf("Player wins.\n");
-                    else if (res == 'T') printf("Draw.\n");
+                    system("cls");
+                    gameBoard();
+                    if(res == 'O') printf("\nBot Win.\n");
+                    else if (res == 'X') printf("\nPlayer Win.\n");
+                    else if (res == 'T') printf("\nDraw.\n");
                     break;
                 }
 
@@ -213,38 +221,42 @@ int main (){
         }
 
         if(level==3){
-            gameBoard();
             int turn;
-            printf("Bot go first? (1/0) : ");
+            system("cls");
+            printf("AI go first? (1/0) : ");
             scanf("%d", &turn);
 
             if(turn) cnt++;
             while(1){
+                system("cls");
+                gameBoard();
                 if(cnt%2==0){
-                    printf("\nPlayer your move: ");
+                    printf("\nPlayer your move: \n");
                     scanf("%d %d", &x, &y);
                     if(arr[x][y]=='X' || arr[x][y]=='O' || x<0 || x>2 || y<0 || y>2) continue;
                     arr[x][y] = 'X';
                     cnt++;
                 }
                 else {
-                    printf("\nAI\n");
+                    printf("\nBot\n");
                     bestMove();
                     cnt++;
                 }
 
-                gameBoard();
                 res = result();
                 if(res!='-') {
-                    if(res == 'O') printf("AI wins.\n");
-                    else if (res == 'X') printf("Player wins.\n");
-                    else if (res == 'T') printf("Draw.\n");
+                    system("cls");
+                    gameBoard();
+                    if(res == 'O') printf("\nAI Win.\n");
+                    else if (res == 'X') printf("\nPlayer Win.\n");
+                    else if (res == 'T') printf("\nDraw.\n");
                     break;
                 }
             }
         }
         int repeat;
-        printf("\nPlay again? (1/0) : ");
+        printf("\n===========================================\n\n");
+        printf("Play again? (1/0) : ");
         scanf("%d", &repeat);
         if (repeat == 0) return 0;
     }
