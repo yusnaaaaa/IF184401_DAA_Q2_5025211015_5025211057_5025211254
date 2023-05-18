@@ -16,13 +16,14 @@ void mainScreen(){
     printf("===============================================\n");
 }
 
-void gameBoard() {
+void gameBoard(char* P1, char* P2) {
     printf("=============== Tic Tac Toe ===============\n\n");
     printf("\t\t %c | %c | %c \n", arr[0][0], arr[0][1], arr[0][2]);
     printf("\t\t---+---+---\n");
     printf("\t\t %c | %c | %c \n", arr[1][0], arr[1][1], arr[1][2]);
     printf("\t\t---+---+---\n");
     printf("\t\t %c | %c | %c \n", arr[2][0], arr[2][1], arr[2][2]);
+    printf("\n\t %s : 'X'\t %s : 'O'\n", P1,P2);
     printf("===========================================\n");
 }
 
@@ -144,7 +145,7 @@ int main (){
         mainScreen();
         int level;
         char res='-';
-        printf("\nSelect Level : ");
+        printf("\n\t      Select Level : ");
         init();
         scanf("%d", &level);
 
@@ -153,8 +154,8 @@ int main (){
 
             while(1){
                 system("cls");
-                gameBoard();
-                printf("\nPlayer %d your move: \n", player);
+                gameBoard("Player 1", "Player 2");
+                printf("\n\t    Player %d your move: \n\t\t    ", player);
                 scanf("%d %d", &x, &y);
 
                 if(arr[x][y]=='X' || arr[x][y]=='O' || x<0 || x>2 || y<0 || y>2) continue;
@@ -166,10 +167,10 @@ int main (){
                 res = result();
                 if(res!='-') {
                     system("cls");
-                    gameBoard();
-                    if(res == 'O') printf("\nPlayer 2 Win.\n");
-                    else if (res == 'X') printf("\nPlayer 1 Win.\n");
-                    else if (res == 'T') printf("\nDraw.\n");
+                    gameBoard("Player 1", "Player 2");
+                    if(res == 'O')          printf("\n\t\tPlayer 2 Win.\n");
+                    else if (res == 'X')    printf("\n\t\tPlayer 1 Win.\n");
+                    else if (res == 'T')    printf("\n\t\t   Draw.\n");
                     break;
                 }
 
@@ -187,9 +188,9 @@ int main (){
             if(turn) cnt++;
             while(1){
                 system("cls");
-                gameBoard();
+                gameBoard("Player", "Bot");
                 if(cnt%2==0){
-                    printf("\nPlayer your move: \n");
+                    printf("\n\t     Player your move: \n\t\t    ");
                     scanf("%d %d", &x, &y);
                     if(arr[x][y]=='X' || arr[x][y]=='O' || x<0 || x>2 || y<0 || y>2) continue;
                     arr[x][y] = 'X';
@@ -210,10 +211,10 @@ int main (){
                 res = result();
                 if(res!='-') {
                     system("cls");
-                    gameBoard();
-                    if(res == 'O') printf("\nBot Win.\n");
-                    else if (res == 'X') printf("\nPlayer Win.\n");
-                    else if (res == 'T') printf("\nDraw.\n");
+                    gameBoard("Player", "Bot");
+                    if(res == 'O')          printf("\n\t\t  Bot Win.\n");
+                    else if (res == 'X')    printf("\n\t\tPlayer Win.\n");
+                    else if (res == 'T')    printf("\n\t\t   Draw.\n");
                     break;
                 }
 
@@ -229,9 +230,9 @@ int main (){
             if(turn) cnt++;
             while(1){
                 system("cls");
-                gameBoard();
+                gameBoard("Player", "AI");
                 if(cnt%2==0){
-                    printf("\nPlayer your move: \n");
+                    printf("\n\t     Player your move: \n\t\t    ");
                     scanf("%d %d", &x, &y);
                     if(arr[x][y]=='X' || arr[x][y]=='O' || x<0 || x>2 || y<0 || y>2) continue;
                     arr[x][y] = 'X';
@@ -246,17 +247,17 @@ int main (){
                 res = result();
                 if(res!='-') {
                     system("cls");
-                    gameBoard();
-                    if(res == 'O') printf("\nAI Win.\n");
-                    else if (res == 'X') printf("\nPlayer Win.\n");
-                    else if (res == 'T') printf("\nDraw.\n");
+                    gameBoard("Player", "AI");
+                    if(res == 'O')          printf("\n\t\t  AI Win.\n");
+                    else if (res == 'X')    printf("\n\t\tPlayer Win.\n");
+                    else if (res == 'T')    printf("\n\t\t  Draw.\n");
                     break;
                 }
             }
         }
         int repeat;
         printf("\n===========================================\n\n");
-        printf("Play again? (1/0) : ");
+        printf("\t   Play again? (1/0) : ");
         scanf("%d", &repeat);
         if (repeat == 0) return 0;
     }
