@@ -12,4 +12,4 @@ NRP | Nama |
 - [Implementation](#Implementation)
 - [Analysis](#Analysis)
 - [Conclusion](#Conclusion)
-- [Job Description and Contribution](#Job Description and Contribution)
+- [Job Description and Contribution](#Job-Description-and-Contribution)
