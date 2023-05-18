@@ -76,6 +76,7 @@ int main (){
                 printf("\nPlayer%d your move: ", player);
                 scanf("%d %d", &x, &y);
 
+                if(arr[x][y]=='X' || arr[x][y]=='O' || x<0 || x>2 || y<0 || y>2) continue;
                 if(player==2) arr[x][y] = 'O';
                 else arr[x][y] = 'X';
 
@@ -100,6 +101,7 @@ int main (){
                 if(cnt%2==0){
                     printf("\nPlayer your move: ");
                     scanf("%d %d", &x, &y);
+                    if(arr[x][y]=='X' || arr[x][y]=='O' || x<0 || x>2 || y<0 || y>2) continue;
                     arr[x][y] = 'X';
                     cnt++;
                 }
