@@ -2,7 +2,6 @@
 #include <time.h>
 #include <stdbool.h>
 #include <stdlib.h>
-#include <limits.h>
 
 #define INTMIN INT_MIN
 #define INTMAX INT_MAX
@@ -11,9 +10,27 @@ char arr[3][3]= {'.','.','.',
                 '.','.','.',
                 '.','.','.'};
 
+
+void mainScreen(){
+    printf("================= Tic Tac Toe =================\n\n");
+    printf("\tLevel 1 : Two Player Game\n");
+    printf("\tLevel 2 : Player vs Bot\n");
+    printf("\tLevel 3 : Player vs AI\n\n");
+    printf("===============================================\n");
+}
+
 void gameBoard(){
     printf("%c  %c  %c \n%c  %c  %c \n%c  %c  %c \n", arr[0][0], arr[0][1], arr[0][2], arr[1][0], arr[1][1], arr[1][2], arr[2][0], arr[2][1], arr[2][2]);
 }
+
+void init(){
+    for(int i=0; i<3; i++){
+        for(int j=0; j<3; j++){
+            arr[i][j]='.';
+        }
+    }
+}
+
 
 char result(){
     for (int i = 0; i < 3; i++){
@@ -50,10 +67,9 @@ char result(){
     return '-';
 }
 
-
 int minimax(int depth, bool isMaximizing){
 
-    int score, bestScore;
+    int score;
     char res = result();
     if (res=='O') {
         score = 1;
@@ -69,7 +85,7 @@ int minimax(int depth, bool isMaximizing){
     }
 
     if(isMaximizing){
-        bestScore = INTMIN;
+        int bestScore = INTMIN;
         for(int i=0; i<3; i++){
             for(int j=0; j<3; j++){
                 if(arr[i][j]=='.'){
@@ -103,15 +119,16 @@ int minimax(int depth, bool isMaximizing){
 
 void bestMove(){
     int score;
-    int bestScore = 0, x, y;
+    int bestScore = INTMIN, x, y;
     for(int i=0; i<3; i++){
        for(int j=0; j<3; j++){
           if(arr[i][j]=='.'){
+            arr[i][j]='O';
             score = minimax(0, false);
             arr[i][j]='.';
             if(score > bestScore){
                 bestScore = score;
-                x = i; y = j;
+                x=i; y=j;
             }
           }
        }
@@ -120,21 +137,13 @@ void bestMove(){
 }
 
 int main (){
-    printf("Level 1 : Two Player Game\n");
-    printf("Level 2 : Player vs Bot\n");
-    printf("Level 3 : Player vs AI\n\n");
+    mainScreen();
 
     while(1){
         int level;
         char res='-';
-
-        for(int i=0; i<3; i++){
-            for(int j=0; j<3; j++){
-                arr[i][j]='.';
-            }
-        }
-
         printf("\nSelect Level : ");
+        init();
         scanf("%d", &level);
 
         int player=1, x, y, cnt=0;
