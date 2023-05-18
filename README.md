@@ -194,7 +194,7 @@ https://github.com/yusnaaaaa/IF184401_DAA_Q2_5025211015_5025211057_5025211254/bl
 
 `Header file <stdlib.h>` : This header file provides general utility functions such as dynamic memory allocation (malloc() and free()) and other utility functions. In this program, this header file is used to use functions like rand() to generate random numbers.
 
-`Header file <string.h>` : This header file provides functions for string manipulation, such as strcpy() and strlen(). In this program, this header file is not directly used, so it may not be necessary in the context of this program.
+`Header file <string.h>` : This header file provides functions for string manipulation, such as strcpy() and strlen(). 
 
 ### Array Board
 
