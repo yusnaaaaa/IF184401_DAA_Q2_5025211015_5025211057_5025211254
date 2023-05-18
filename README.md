@@ -1,14 +1,14 @@
 # IF184401_DAA_Q2_5025211015_5025211057_5025211254
 
-## Anggota Kelompok
+## Group Member
 
-| NRP        | Nama                        |
+| NRP        | Name                        |
 | ---------- | --------------------------- |
 | 5025211015 | Muhammad Daffa Ashdaqfillah |
 | 5025211057 | Salsabila Fatma Aripa       |
 | 5025211254 | Yusna Millaturrosyidah      |
 
-## Daftar Isi
+## Table of Contents
 
 - [About](#About)
 - [Design](#Design)
