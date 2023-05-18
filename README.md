@@ -13,3 +13,16 @@ NRP | Nama |
 - [Analysis](#Analysis)
 - [Conclusion](#Conclusion)
 - [Job Description and Contribution](#Job-Description-and-Contribution)
+
+## About
+
+## Design
+
+## Implementation
+
+## Analysis
+
+## Conclusion
+
+## Job Description and Contribution
+
