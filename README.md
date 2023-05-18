@@ -37,6 +37,101 @@ The game ends when a player wins or the game ends in a draw. Players can   choos
 
 ## Design
 
+Tic Tac Toe is a two player game where they take turns placing their symbols `(X or O)` on the available squares on a 3x3 game board. The goal is to reach a row, column, or diagonal consisting of three of the same symbol. In implementing this Tic Tac Toe game, we use the `C++ programming language`. There are several functions that we created for this game, including the functions `mainScreen()`, `gameBoard()`, `init()`, `result()`, `minimax()`, `bestMove()`, dan ` main()`.
+
+* The `mainScreen()` function displays the main screen of the Tic Tac Toe game to the user. Here is the explanation of the function:
+    + Displays the game title "Tic Tac Toe" in the middle of the screen.
+    + Displays a selection of available game levels:
+        - Level 1: Two player game. Users will play against other players.
+        - Level 2: Game against bots. Users will play against bots whose steps are randomly generated.
+        - Level 3: Game against AI. Users will play against an AI that uses the minimax algorithm to make the best move decisions.
+    + Provides blank line spacing to separate level selections and other parts of the screen.
+    + Displays a horizontal line as a separation between the level selection and the rest of the screen.
+
+By displaying this information, the `mainScreen()` function gives the user an overview of the game levels available in Tic Tac Toe. Users can select the desired game level to start playing.
+
+* The `gameBoard()` function is used to display the Tic Tac Toe game board to the screen, including the position of the 'X' and 'O' marks that have been selected by the player. Here is the explanation of the function:
+    + Displays the title "Tic Tac Toe" in the middle of the screen.
+    + Displays the positions of the 'X' and 'O' marks on the game board as a 3x3 matrix:
+        - Row 1: Column 1, Column 2, Column 3
+        - Row 2: Column 1, Column 2, Column 3
+        - Row 3: Column 1, Column 2, Column 3
+        Each matrix element represents the mark it is in that position on the game board.
+    + Displays the horizontal separator between the game board rows.
+    + Displays the information of the players involved in the game:
+        - Name P1: 'X'
+        - Name P2: 'O'
+    + Provides blank line spacing to separate parts of the game board from the rest of the screen.
+    + Displays a horizontal line as a separation between the game board and the rest of the screen.
+
+By displaying this information, the `gameBoard()` function shows the user the position of the marks on the game board, as well as showing the players acting as 'X' and 'O'. Users can view the game status and continue the game by entering their steps into the boxes provided on the game board.
+ * The `init()` function is used to initialize the Tic Tac Toe game board with a dot ('.') character. Here is the explanation of the function:
+    + Iterate through the rows and columns of the game board using a for loop.
+    + At each iteration, set the value of the elements in row i and column j position on the game board (arr) to be a dot character ('.').
+    + After the loop has finished executing, the game board is filled with a dot character ('.') in each square, indicating that the square is empty and no marks have been placed in it
+
+By initializing it this way, the `init()` function prepares the game board empty before the game starts. This allows the player to start the game with a clean game board and without any marks.
+
+* The `result()` function is used to check the result of playing Tic Tac Toe on the game board (arr). Here is the explanation of the function:
+    + Perform row checks: Iterate through each row on the game board.
+        - If all three squares in the same row have the same value (X or O) and are not a period character ('.'), then returns that character's value as a winner.
+    + Perform column checks: Iterate through each column on the game board.
+        - If all three squares in the same column have the same value (X or O) and are not a period character ('.'), then returns that character's value as a winner.
+    + Performs main diagonal check: Checks whether the three squares on the main diagonal have the same value (X or O) and not a dot character ('.').
+        - If yes, returns that character's value as a winner.
+    + Performs secondary diagonal check: Checks whether three squares on the secondary diagonal have the same value (X or O) and not a dot character ('.').
+        - If yes, returns that character's value as a winner.
+    + Checking to determine the draw:
+        - Iterate through all the squares on the game board.
+        - If there is at least one empty box (worth the dot character '.'), then change the check variable to false.
+        - If all boxes are filled in (no dot character '.'), then return the character 'T' which indicates a draw.
+    + If there is no winner or draw, returns a '-' character indicating that the game is still in progress.
+
+By checking like this, the `result()` function determines the game result based on the current state of the game board.
+
+* The `minimax()` function is an implementation of the Minimax algorithm in the Tic Tac Toe game. Here is the explanation of the code:
+    + Check the current game result by calling the result() function:
+        - If the result of the game is player 'O' winning, returns a positive score of 1.
+        - If the result of the game is player 'X' winning, returns a negative score of -1.
+        - If the result of the game is a draw, returns a score of 0.
+    + If the player currently running is player 'O' (isMaximizing = true):
+        - Initialize the bestScore variable with a value of -1000 as a very low initial score.
+        - Iterate through each square on the game board.
+        - If the box is empty (worth the dot character '.'), simulate the move of player 'O' on the box:
+            + Defines the box with the character 'O'.
+            + Recursively calls the minimax() function with depth increments (depth+1) and switches the current player to the opposing player (isMaximizing = false).
+            + Returns the score from the recursive call.
+            + Returns the best score (max value) of all possible moves of player 'O'.
+    + If the player currently running is player 'X' (isMaximizing = false):
+        - Initialize the bestScore variable with a value of 1000 as a very high initial score.
+        - Iterate through each square on the game board.
+        - If the square is empty (worth the dot character '.'), simulate player 'X' move on the square:
+            + Defines the box with the character 'X'.
+            + Recursively calls the minimax() function with increased depth (depth+1) and switches the current player to the opposing player (isMaximizing = true).
+            + Returns the score from the recursive call.
+            + Returns the best score (min value) of all possible moves of player 'X'.
+
+Using the Minimax algorithm, the `minimax()` function tries all possible moves for each player in turn and chooses the best move based on the resulting score.
+
+* The `bestMove()` function is used to determine the best move to be taken by player 'O' using the Minimax algorithm. Here is the explanation of the code:
+    + Initialize the bestScore variable with a very low initial value (-1000).
+    + Iterate through each square on the game board.
+    + If the box is empty (worth a dot character '.'), then:
+        - Simulate player 'O' move by assigning the square with character 'O'.
+        - Calls the minimax() function with an initial depth of 0 and sets isMaximizing to false.
+        - Returns the score from the minimax() call.
+        - Restore the box to its original state by setting the box back to the dot '.' character.
+        - If the score obtained is greater than the bestScore, update the bestScore with that score and note the position of the (x, y) box.
+    + Set squares with position (x,y) with character 'O', which is the best move for player 'O' to take.
+
+Using the Minimax algorithm, the `bestMove()` function tries all possible moves of player 'O' by calling `minimax()` for each possible move, and then selecting the move with the highest score for player 'O'.
+
+* The `main()` function: Sets the flow of the game. Contains a main loop that allows the user to play repeatedly. In each iteration, level selection, initialization of the game board, processing of player and AI/Bot steps, and checking of game results are carried out.
+
+Through the use of a control structure and looping, this code allows players to play Tic Tac Toe against other players, random bots, or AI that uses the minimax algorithm. The user is given the option to play again or exit the program after each game.
+
+Using this approach, players can interact with the game of Tic Tac Toe and enjoy the experience of playing against other players or dealing with intelligent AI strategies.
+
 ## Implementation
 **a. Minimax Algorithm :** 
 The minimax algorithm is a well-known algorithm used in game theory and decision-making problems. It is a recursive function that simulates all possible moves that both the AI and the player can make, and assigns a score to each move based on the likelihood of winning the game. The function then chooses the move with the highest score for the AI.
