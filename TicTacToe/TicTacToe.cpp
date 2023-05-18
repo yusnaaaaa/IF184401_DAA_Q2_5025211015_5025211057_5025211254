@@ -88,7 +88,7 @@ int minimax(int depth, bool isMaximizing){
         for(int i=0; i<3; i++){
             for(int j=0; j<3; j++){
                 if(arr[i][j]=='.'){
-                    arr[i][j]='O';
+                    arr[i][j]='X';
                     score = minimax(depth+1, true);
                     arr[i][j]='.';
                     if(score > bestScore){
@@ -111,8 +111,7 @@ void bestMove(){
             arr[i][j]='.';
             if(score > bestScore){
                 bestScore = score;
-                x = i;
-                y = j;
+                x = i; y = j;
             }
           }
        }
