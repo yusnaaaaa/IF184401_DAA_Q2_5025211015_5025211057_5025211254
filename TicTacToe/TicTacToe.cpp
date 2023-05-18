@@ -3,9 +3,6 @@
 #include <stdbool.h>
 #include <stdlib.h>
 
-#define INTMIN INT_MIN
-#define INTMAX INT_MAX
-
 char arr[3][3]= {'.','.','.',
                 '.','.','.',
                 '.','.','.'};
@@ -85,7 +82,7 @@ int minimax(int depth, bool isMaximizing){
     }
 
     if(isMaximizing){
-        int bestScore = INTMIN;
+        int bestScore = -1000;
         for(int i=0; i<3; i++){
             for(int j=0; j<3; j++){
                 if(arr[i][j]=='.'){
@@ -100,14 +97,14 @@ int minimax(int depth, bool isMaximizing){
         }
         return bestScore;
     } else {
-        int bestScore = INTMAX;
+        int bestScore = 1000;
         for(int i=0; i<3; i++){
             for(int j=0; j<3; j++){
                 if(arr[i][j]=='.'){
                     arr[i][j]='X';
                     score = minimax(depth+1, true);
                     arr[i][j]='.';
-                    if(score > bestScore){
+                    if(score < bestScore){
                         bestScore = score;
                     }
                 }
@@ -119,7 +116,7 @@ int minimax(int depth, bool isMaximizing){
 
 void bestMove(){
     int score;
-    int bestScore = INTMIN, x, y;
+    int bestScore = -1000, x, y;
     for(int i=0; i<3; i++){
        for(int j=0; j<3; j++){
           if(arr[i][j]=='.'){
