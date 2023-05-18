@@ -23,13 +23,13 @@ This document is the documentation for the `Tic Tac Toe Project`, which is part 
 
 **Leveling :**
 
-- Level 1: Two Player Game
+- Level 1: Two Player Game <br />
   In this level, two players take turns placing X's and O's on the game board until someone wins or the game ends in a draw. The game board is displayed on the screen, and players input their moves via the command line.
 
-- Level 2: Player vs Bot
+- Level 2: Player vs Bot <br />
   In this level, the player goes up against a computer-controlled opponent. The player can choose to go first or second. If the player goes first, they input their moves via the command line as in Level 1. If the player goes second, the computer will make the first move, and subsequent moves are made by the player and the computer in turn.
 
-- Level 3: Player vs AI (Unbeatable)
+- Level 3: Player vs AI (Unbeatable) <br />
   This level introduces an AI opponent that is more difficult to beat than the bot in Level 3. The AI opponent uses an algorithm called minimax to determine the best move to make based on the current state of the game board.
 
 **How to play :**
@@ -139,7 +139,7 @@ Using this approach, players can interact with the game of Tic Tac Toe and enjoy
 
 ## Implementation
 
-**a. Minimax Algorithm :**
+### a. Minimax Algorithm :
 The minimax algorithm is a well-known algorithm used in game theory and decision-making problems. It is a recursive function that simulates all possible moves that both the AI and the player can make, and assigns a score to each move based on the likelihood of winning the game. The function then chooses the move with the highest score for the AI.
 
 In Tic Tac Toe, the algorithm is used in Level 3 to determine the best move for the AI opponent. The algorithm starts by checking if the current state of the game board is a winning state for either the AI or the player. If it is, it returns a score of 1 for a win, -1 for a loss, and 0 for a tie.
@@ -167,7 +167,7 @@ As we traverse all levels of a tree and at each level, we need to generate all p
 
 ![grafik minimax](https://github.com/yusnaaaaa/IF184401_DAA_Q2_5025211015_5025211057_5025211254/assets/91377793/7df5152e-7716-498f-a093-42ad03db1b17)
 
-**b. Random value by time :**
+### b. Random value by time :
 
 In level 2 of the game, where the player is playing against the bot, we use the rand() function to obtain random numbers. However, there is an adjustment to ensure that the generated numbers are truly different each time it is called.
 
