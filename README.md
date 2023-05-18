@@ -90,3 +90,5 @@ In the context of this game, rand() is used to select random positions on the ga
     - Layouting terminal, making result checker, debugging minimax algorithm.
 3. (5025211254) Yusna Millaturrosyidah (33,33%)
     - Creating game concept, adding turn bot and player movement, debugging minimax algorithm.
+
+![ttd](https://github.com/yusnaaaaa/IF184401_DAA_Q2_5025211015_5025211057_5025211254/assets/91377793/40b499be-1532-45b8-a257-a82cfd702af8)
