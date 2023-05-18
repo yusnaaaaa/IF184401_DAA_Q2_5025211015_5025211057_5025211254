@@ -294,6 +294,24 @@ Level 3, player vs. AI, follows a similar structure to level 2, but instead of r
 
 After the game ends, the player is given the option to play again. If they choose to continue, the loop restarts, and if not, the program terminates. This structure ensures that the game remains interactive and allows for multiple rounds of gameplay.
 
+## Play Game
+1. We can choose the level first, the example we use is level 3
+![ttt1](https://github.com/yusnaaaaa/IF184401_DAA_Q2_5025211015_5025211057_5025211254/assets/114417418/e9393d74-73db-450d-85ed-a2009a87ea33)
+
+2. After selecting the level, then there is the question "AI go first? (1/0)". If the player chooses 1, the AI will start the game first, if it chooses 0 then vice versa.
+![ttt2](https://github.com/yusnaaaaa/IF184401_DAA_Q2_5025211015_5025211057_5025211254/assets/114417418/8273ca83-50b1-44ec-93d9-bd8980937034)
+
+3. Players can immediately start the game
+![ttt3](https://github.com/yusnaaaaa/IF184401_DAA_Q2_5025211015_5025211057_5025211254/assets/114417418/fe505858-fc03-4ace-b716-e2e2a4d48367)
+
+4. Then, the terminal will display player switching. Then, so on.
+![ttt4](https://github.com/yusnaaaaa/IF184401_DAA_Q2_5025211015_5025211057_5025211254/assets/114417418/0d11cdcb-ef8b-481e-9760-929df9558ab7)
+
+5. The following is a display if the game is a draw.  Then the option to play again or exit the game will appear.
+![ttt5](https://github.com/yusnaaaaa/IF184401_DAA_Q2_5025211015_5025211057_5025211254/assets/114417418/c56d3ec2-c15a-4073-a69b-de7a03d06c5d)
+
+6. When the game has ended, the terminal will display the winner of the game. Then the option to play again or exit the game will appear.
+![ttt6](https://github.com/yusnaaaaa/IF184401_DAA_Q2_5025211015_5025211057_5025211254/assets/114417418/7ec8b100-9f56-4e17-bfbf-4a53ae807564)
 
 ## Conclusion
 
