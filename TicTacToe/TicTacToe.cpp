@@ -106,8 +106,8 @@ int main (){
                     cnt++;
                 }
                 else {
-
                     printf("\nBot\n");
+                    srand(time(0)); // adding random by time
                     while(1){
                         x = rand()%3;
                         y = rand()%3;
@@ -127,6 +127,31 @@ int main (){
                     break;
                 }
 
+            }
+        }
+        if(level==3){
+            gameBoard();
+            while(1){
+                if(cnt%2==0){
+                    printf("\nPlayer your move: ");
+                    scanf("%d %d", &x, &y);
+                    if(arr[x][y]=='X' || arr[x][y]=='O' || x<0 || x>2 || y<0 || y>2) continue;
+                    arr[x][y] = 'X';
+                    cnt++;
+                }
+                else {
+                    printf("\nAI\n");
+                    //minimax 
+                }
+                gameBoard();
+                
+                res = result();
+                if(res!='-') {
+                    if(res == 'O') printf("AI wins.\n");
+                    else if (res == 'X') printf("Player wins.\n");
+                    else if (res == 'T') printf("Draw.\n");
+                    break;
+                }
             }
         }
         int repeat;
