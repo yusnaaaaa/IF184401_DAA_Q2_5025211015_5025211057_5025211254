@@ -142,17 +142,20 @@ int main (){
         if(level==1){
             gameBoard();
             while(1){
+
                 printf("\nPlayer%d your move: ", player);
                 scanf("%d %d", &x, &y);
 
                 if(arr[x][y]=='X' || arr[x][y]=='O' || x<0 || x>2 || y<0 || y>2) continue;
+
                 if(player==2) arr[x][y] = 'O';
                 else arr[x][y] = 'X';
 
                 gameBoard();
 
+                cnt++;
                 res = result();
-                if(res!='-' && level == 2) {
+                if(res!='-') {
                     if(res == 'O') printf("Player2 wins.\n");
                     else if (res == 'X') printf("Player1 wins.\n");
                     else if (res == 'T') printf("Draw.\n");
@@ -166,6 +169,11 @@ int main (){
 
         if(level==2){
             gameBoard();
+            int turn;
+            printf("Bot go first? (1/0) : ");
+            scanf("%d", &turn);
+
+            if(turn) cnt++;
             while(1){
                 if(cnt%2==0){
                     printf("\nPlayer your move: ");
@@ -175,8 +183,9 @@ int main (){
                     cnt++;
                 }
                 else {
+
                     printf("\nBot\n");
-                    srand(time(0)); // adding random by time
+                    srand(time(0));
                     while(1){
                         x = rand()%3;
                         y = rand()%3;
@@ -187,7 +196,6 @@ int main (){
                 }
 
                 gameBoard();
-                
                 res = result();
                 if(res!='-') {
                     if(res == 'O') printf("Bot wins.\n");
@@ -198,6 +206,7 @@ int main (){
 
             }
         }
+
         if(level==3){
             gameBoard();
             int turn;
