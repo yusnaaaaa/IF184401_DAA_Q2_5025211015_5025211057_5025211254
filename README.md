@@ -25,4 +25,9 @@ NRP | Nama |
 ## Conclusion
 
 ## Job Description and Contribution
-
+1. (5025211015) Muhammad Daffa Ashdaqfillah (33,33%)
+    - Validation movement, resolving bot random move by time, debugging minimax algorithm.
+2. (5025211057) Salsabila Fatma Aripa (33,33%)
+    - Layouting terminal, making result checker, debugging minimax algorithm.
+3. (5025211254) Yusna Millaturrosyidah (33,33%)
+    - Creating game concept, adding turn bot and player movement, debugging minimax algorithm.
